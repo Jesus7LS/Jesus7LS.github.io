@@ -1,0 +1,517 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: #2d8f2a; /* Verde */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000; /* Fondo oscuro */
+    z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
+    transform: translateY(-100%);
+    animation: movedown 850ms ease-in 1s forwards;
+}
+
+/* Animación para mostrar el menú */
+@keyframes movedown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 3rem;
+    font-size: var(--text);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid var(--bg-color);
+}
+
+/* Fondo de la sección hero */
+.hero-section {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+/* Hero text */
+.hero-text {
+    color: white;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    top: 0;
+    opacity: 0.6;
+}
+
+.hero-text a {
+    color: white;
+    background: var(--bg-color);
+    font-weight: 900;
+    font-size: var(--text);
+    padding: 0.8rem 1rem;
+    margin: 0.8rem auto;
+    display: block;
+    text-decoration: none;
+    transition: opacity 250ms linear;
+}
+
+.hero-text a:hover {
+    opacity: 0.8;
+}
+
+.hero-text h2 {
+    font-size: var(--head);
+}
+
+.hero-text p {
+    font-size: 3rem;
+}
+
+/* Sección principal (Sobre Nosotros) */
+.about-section {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.about-text {
+    max-width: 700px;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-text h1 {
+    font-size: var(--head);
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Secciones Misión, Visión y Objetivo */
+.section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.section:nth-child(even) {
+    background-color: #ececec;
+}
+
+.section-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: calc(1.5rem + 2vw);
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.section p {
+    font-size: var(--text);
+    line-height: 1.6;
+}
+
+/* Efectos de animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de Contacto */
+.contact-section {
+    padding: 6rem 1.5rem;
+    background: url("https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+.contact-section .section-text {
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.contact-section h2 {
+    font-size: calc(1.5rem + 2vw);
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: var(--text);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.contact-form button.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-btn:hover {
+    background-color: #218c24;
+}
+
+/* Footer */
+.footer {
+    background-color: #2d8f2a; /* Verde */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links ul li {
+    margin-left: 2rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-links ul li a:hover {
+    color: #f6b93b;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.footer-social .social-icon {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #f6b93b;
+}
+
+.footer-copy {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Sección de Características */
+.features-section {
+    padding: 6rem 1.5rem;
+    position: relative;
+    background: url("https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80") no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    margin-top: 10vh; /* Para que no se superponga con el navbar */
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+.features-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Sombra oscura */
+    z-index: -1; /* Lo coloca por detrás del contenido */
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.features-header {
+    margin-bottom: 3rem;
+}
+
+.features-header h2 {
+    font-size: calc(1.5rem + 2vw);
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.features-header p {
+    font-size: var(--text);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Lista de características */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada característica */
+.feature-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.6;
+}
+.manual-section {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.manual-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad para hacer el fondo más oscuro */
+    z-index: -1;
+}
+
+/* Ajustes para el contenedor del video y el texto */
+.manual-section h1, .manual-section p {
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 900px; /* Aumenta este valor para hacer el video más grande */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Opcional: Añade la animación de deslizamiento */
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.manual h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.manual p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Estilos del contenedor de video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
