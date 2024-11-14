@@ -10,13 +10,20 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
         <h2>Eventual</h2>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="manual.html">Manual de usuario</a></li>
             <li><a href="sobre.html">Sobre nosotros</a></li>
-            <li><a href="caracteristicas.html">Caracteristicas</a></li>
+            <li><a href="caracteristicas.html">Características</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
+<script>
+    function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+}
+
+</script>        
     </nav>
     <br><br>
 

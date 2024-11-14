@@ -515,3 +515,133 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        padding: 10px;
+        display: none; /* Oculto inicialmente */
+        border-radius: 8px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* Icono de menú para dispositivos móviles */
+    .navbar .menu-icon {
+        display: block;
+        color: white;
+        font-size: 1.8em;
+        cursor: pointer;
+    }
+}
+
+/* Mostrar menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar.show-menu ul {
+        display: flex;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .manual-section h1 {
+        font-size: 2em;
+    }
+    .manual-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .manual-section h1 {
+        font-size: 1.5em;
+    }
+    .manual-section p {
+        font-size: 0.9em;
+    }
+    .video-container {
+        width: 90%;
+    }
+}
+/* Responsivo */
+@media (max-width: 768px) {
+    .section-text h2 {
+        font-size: 1.8em;
+    }
+
+    .section-text p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-text h2 {
+        font-size: 1.5em;
+    }
+
+    .section-text p {
+        font-size: 0.9em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9em;
+    }
+
+    .submit-btn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        display: none; /* Oculta el menú inicialmente */
+        position: absolute;
+        top: 60px; /* Ajusta según la altura de tu barra de navegación */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Mostrar el menú cuando esté activo */
+    ul.active {
+        display: flex;
+    }
+
+    ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
